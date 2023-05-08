@@ -1,17 +1,17 @@
-import {visionTool} from '@sanity/vision'
 import {defineConfig} from 'sanity'
 import {deskTool} from 'sanity/desk'
+import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemas'
 
-export const projectId = process.env.SANITY_STUDIO_PROJECT_ID!
-export const dataset = process.env.SANITY_STUDIO_DATASET!
-
 export default defineConfig({
-  name: 'project-name',
-  title: 'Project Name',
-  projectId,
-  dataset,
+  name: 'default',
+  title: 'personal-site',
+
+  projectId: '5a3auag5',
+  dataset: 'production',
+
   plugins: [deskTool(), visionTool()],
+
   schema: {
     types: schemaTypes,
   },

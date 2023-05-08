@@ -1,6 +1,4 @@
 <script lang="ts">
-	import Card from '../components/Card.svelte';
-	import Welcome from '../components/Welcome.svelte';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -9,9 +7,11 @@
 <section>
 	{#if data.posts.length}
 		{#each data.posts as post}
-			<Card {post} />
+			<p>Yosh</p>
 		{/each}
 	{:else}
-		<Welcome />
+		<div>
+			<p>Test</p>
+		</div>
 	{/if}
 </section>
