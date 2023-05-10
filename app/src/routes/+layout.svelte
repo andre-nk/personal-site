@@ -1,7 +1,7 @@
 <script>
 	import SidebarIcon from '$lib/components/SidebarIcon.svelte';
-	import "@fontsource/source-serif-pro";
-	import "@fontsource/inter";
+	import '@fontsource/source-serif-pro';
+	import '@fontsource/inter/latin.css';
 
 	import '../app.postcss';
 	import {
@@ -10,7 +10,8 @@
 		PlanetOutline,
 		HappyOutline,
 		BookOutline,
-		MailOutline
+		MailOutline,
+		CodeSlashOutline
 	} from 'svelte-ionicons';
 
 	//states
@@ -43,10 +44,14 @@
 			<SidebarIcon pathname="/about">
 				<HappyOutline />
 			</SidebarIcon>
+			<SidebarIcon pathname="/project">
+				<CodeSlashOutline />
+			</SidebarIcon>
+
 			<SidebarIcon pathname="/blog">
 				<BookOutline />
 			</SidebarIcon>
-			<SidebarIcon pathname="mailto:andreasnotokusumo23@gmail.com" isSocialButton={true}>
+			<SidebarIcon pathname="mailto:andreasnotokusumo23@gmail.com">
 				<MailOutline />
 			</SidebarIcon>
 		</div>

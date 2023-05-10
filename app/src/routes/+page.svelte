@@ -23,7 +23,8 @@
 			<div
 				class="w-full rounded-xl transition hover:border-[0.8px] border-outline duration-200 bg-white px-4 py-3.5 flex flex-col space-y-4"
 			/>
-			<div
+			<a
+				href="/project"
 				class="w-full aspect-square rounded-xl transition hover:border-[0.8px] border-outline duration-200 bg-white px-4 py-3.5 flex flex-col justify-between"
 			>
 				<div class="w-full flex justify-end">
@@ -31,13 +32,14 @@
 						<ArrowForwardCircleOutline />
 					</button>
 				</div>
-				<h3 class="font-source text-xl font-semibold">
+				<h3 class="font-source text-lg leading-tight font-semibold">
 					discover <br />
 					all projects
 				</h3>
-			</div>
+			</a>
 		</div>
-		<div
+		<a
+			href="/project/sindustore"
 			class="w-full overflow-clip aspect-square rounded-xl transition hover:border-[0.8px] border-outline duration-200 bg-white flex flex-col justify-between"
 		>
 			<div class="px-6 py-5 flex flex-col">
@@ -54,6 +56,6 @@
 				</p>
 			</div>
 			<div class="h-1/2 bg-gray-200 rounded-xl" />
-		</div>
+		</a>
 	</div>
 </section>
