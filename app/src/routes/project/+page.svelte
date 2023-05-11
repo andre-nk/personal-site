@@ -1,116 +1,90 @@
 <script>
-	import { ArrowForward } from 'svelte-ionicons';
+	import { SearchOutline, ArrowForwardCircleOutline } from 'svelte-ionicons';
+
+	let searchQuery = "";
 </script>
 
 <section>
 	<div class="p-6 flex flex-col items-center justify-start space-y-6">
-		<div class="w-full overflow-clip aspect-square rounded-xl bg-white">
-			<!--Photo-->
+		<div class="w-full px-5 py-4 rounded-xl bg-white flex justify-start items-center space-x-4">
+			<SearchOutline size=20/>
+			<input value={searchQuery} placeholder="Search projects..." class="outline-none font-inter font-light"/>
 		</div>
-
-		<div class="w-full p-6 rounded-xl bg-white flex flex-col space-y-2">
-			<h2 class="font-source font-semibold text-2xl">hi there! 👋</h2>
-			<p class="font-inter font-light text-sm leading-relaxed">
-				<!--Identity, Based, What do I do, small hobby-->
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum mauris nec interdum
-				auctor. Fusce gravida dictum rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				Praesent fermentum mauris nec interdum auctor. Fusce gravida dictum rhoncus.
-			</p>
-		</div>
-		<div class="w-full p-6 rounded-xl bg-white flex flex-col items-end text-right space-y-2">
-			<h2 class="font-source font-semibold text-2xl">the road so far 🚀</h2>
-			<p class="font-inter font-light text-sm leading-relaxed">
-				<!--origin, freelancing, mobile dev, ui/ux and web dev, present (dsa & system design)-->
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum mauris nec interdum
-				auctor. Fusce gravida dictum rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				Praesent fermentum mauris nec interdum auctor. Fusce gravida dictum rhoncus.
-			</p>
-		</div>
-		<div class="w-full bg-outline rounded-full bg-opacity-20 h-[0.75px]" />
-		<div class="w-full p-3 rounded-xl bg-white flex justify-center">
-			<h4 class="font-inter tracking-widest font-medium">EXPERTISE</h4>
-		</div>
-		<div class="w-full p-6 rounded-xl bg-white flex flex-col space-y-5">
-			<div class="flex flex-col space-y-2">
-				<h2 class="font-source font-semibold text-2xl">mobile development 📱</h2>
-				<p class="font-inter font-light text-sm leading-relaxed">
+		<a
+			href="/project/sindustore"
+			class="w-full overflow-clip aspect-square rounded-xl transition hover:border-[0.8px] border-outline duration-200 bg-white flex flex-col justify-between"
+		>
+			<div class="px-6 py-5 flex flex-col">
+				<div class="flex justify-between items-center">
+					<p class="text-xs tracking-wider font-medium">FLUTTER APPS</p>
+					<button>
+						<ArrowForwardCircleOutline />
+					</button>
+				</div>
+				<h2 class="font-source text-2xl mt-4 font-semibold">Sindustore</h2>
+				<p class="font-extralight text-sm mt-1">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum mauris nec
-					interdum auctor. Fusce gravida dictum rhoncus. Lorem ipsum dolor sit amet, consectetur
-					adipiscing elit. Praesent fermentum mauris nec interdum auctor. Fusce gravida dictum
-					rhoncus.
+					interdum auctor. Fusce gravida dictum
 				</p>
 			</div>
-			<a href="/project" class="flex items-center space-x-2 hover:text-blue-500 duration-200">
-				<p class="text-xs tracking-wider font-medium">RELATED PROJECTS</p>
-				<ArrowForward size="16" />
-			</a>
-		</div>
-		<div class="w-full p-6 rounded-xl bg-white flex flex-col space-y-5">
-			<div class="flex flex-col space-y-2">
-				<h2 class="font-source font-semibold text-2xl">fullstack web dev 💻</h2>
-				<p class="font-inter font-light text-sm leading-relaxed">
+			<div class="h-1/2 bg-gray-200 rounded-xl" />
+		</a>
+		<a
+			href="/project/sindustore"
+			class="w-full overflow-clip aspect-square rounded-xl transition hover:border-[0.8px] border-outline duration-200 bg-white flex flex-col justify-between"
+		>
+			<div class="px-6 py-5 flex flex-col">
+				<div class="flex justify-between items-center">
+					<p class="text-xs tracking-wider font-medium">FLUTTER APPS</p>
+					<button>
+						<ArrowForwardCircleOutline />
+					</button>
+				</div>
+				<h2 class="font-source text-2xl mt-4 font-semibold">Sindustore</h2>
+				<p class="font-extralight text-sm mt-1">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum mauris nec
-					interdum auctor. Fusce gravida dictum rhoncus. Lorem ipsum dolor sit amet, consectetur
-					adipiscing elit. Praesent fermentum mauris nec interdum auctor. Fusce gravida dictum
-					rhoncus.
+					interdum auctor. Fusce gravida dictum
 				</p>
 			</div>
-			<a href="/project" class="flex items-center space-x-2 hover:text-blue-500 duration-200">
-				<p class="text-xs tracking-wider font-medium">RELATED PROJECTS</p>
-				<ArrowForward size="16" />
-			</a>
-		</div>
-		<div class="w-full p-6 rounded-xl bg-white flex flex-col space-y-5">
-			<div class="flex flex-col space-y-2">
-				<h2 class="font-source font-semibold text-2xl">UI/UX design 🎨</h2>
-				<p class="font-inter font-light text-sm leading-relaxed">
+			<div class="h-1/2 bg-gray-200 rounded-xl" />
+		</a>
+		<a
+			href="/project/sindustore"
+			class="w-full overflow-clip aspect-square rounded-xl transition hover:border-[0.8px] border-outline duration-200 bg-white flex flex-col justify-between"
+		>
+			<div class="px-6 py-5 flex flex-col">
+				<div class="flex justify-between items-center">
+					<p class="text-xs tracking-wider font-medium">FLUTTER APPS</p>
+					<button>
+						<ArrowForwardCircleOutline />
+					</button>
+				</div>
+				<h2 class="font-source text-2xl mt-4 font-semibold">Sindustore</h2>
+				<p class="font-extralight text-sm mt-1">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum mauris nec
-					interdum auctor. Fusce gravida dictum rhoncus. Lorem ipsum dolor sit amet, consectetur
-					adipiscing elit. Praesent fermentum mauris nec interdum auctor. Fusce gravida dictum
-					rhoncus.
+					interdum auctor. Fusce gravida dictum
 				</p>
 			</div>
-			<a href="/project" class="flex items-center space-x-2 hover:text-blue-500 duration-200">
-				<p class="text-xs tracking-wider font-medium">RELATED PROJECTS</p>
-				<ArrowForward size="16" />
-			</a>
-		</div>
-
-		<div class="w-full bg-outline rounded-full bg-opacity-20 h-[0.75px]" />
-		<div class="w-full p-3 rounded-xl bg-white flex justify-center">
-			<h4 class="font-inter tracking-widest font-medium">WHAT DID THEY SAY?</h4>
-		</div>
-		<div class="w-full p-6 rounded-xl bg-white flex flex-col space-y-3">
-			<p class="font-inter font-light italic leading-relaxed">
-				"Good communication. Fast replies. Accommodating to requests."
-			</p>
-			<span class="leading-relaxed"
-				>Alexander Eric Leveriza<br />
-				<p class="text-sm font-light">My Physical Therapist (2021)</p></span
-			>
-		</div>
-		<div class="w-full p-6 rounded-xl bg-white flex flex-col space-y-3">
-			<p class="font-inter font-light italic leading-relaxed">
-				"Once again, always delivering above the expectations! Great worker and very professional!"
-			</p>
-			<span class="leading-relaxed"
-				>Douglas Simão<br />
-				<p class="text-sm font-light">GetHeroes (2021)</p></span
-			>
-		</div>
-		<div class="w-full p-6 rounded-xl bg-white flex flex-col space-y-3">
-			<p class="font-inter font-light italic leading-relaxed">
-				"Very nice person, and works very well! well done! totally recommend him"
-			</p>
-			<span class="leading-relaxed"
-				>Douglas Simão<br />
-				<p class="text-sm font-light">GetNinja (2020)</p></span
-			>
-		</div>
-
-		<div class="w-full bg-outline rounded-full bg-opacity-20 h-[0.75px]" />
-		<div class="w-full p-3 rounded-xl bg-white flex justify-center">
-			<h4 class="font-inter tracking-widest font-medium">HIT ME UP!</h4>
-		</div>
+			<div class="h-1/2 bg-gray-200 rounded-xl" />
+		</a>
+		<a
+			href="/project/sindustore"
+			class="w-full overflow-clip aspect-square rounded-xl transition hover:border-[0.8px] border-outline duration-200 bg-white flex flex-col justify-between"
+		>
+			<div class="px-6 py-5 flex flex-col">
+				<div class="flex justify-between items-center">
+					<p class="text-xs tracking-wider font-medium">FLUTTER APPS</p>
+					<button>
+						<ArrowForwardCircleOutline />
+					</button>
+				</div>
+				<h2 class="font-source text-2xl mt-4 font-semibold">Sindustore</h2>
+				<p class="font-extralight text-sm mt-1">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum mauris nec
+					interdum auctor. Fusce gravida dictum
+				</p>
+			</div>
+			<div class="h-1/2 bg-gray-200 rounded-xl" />
+		</a>
 	</div>
 </section>
