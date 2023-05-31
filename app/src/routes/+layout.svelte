@@ -25,7 +25,7 @@
 
 <div>
 	<div class="overflow-clip lg:hidden">
-		<nav class="bg-white px-[1.4rem] py-3">
+		<nav class="bg-white px-[1.4rem] sm:px-8 py-3">
 			<button
 				on:click={modifySideBar}
 				class="p-1 ml-.5 rounded-md hover:bg-main w-fit duration-200"
@@ -67,7 +67,7 @@
 
 	<div class="hidden lg:block">
 		<div
-			class="bg-white h-screen w-[7.5%] py-4 fixed top-0 left-0 flex flex-col space-y-6 justify-center items-center"
+			class="bg-white h-screen w-[7.5%] py-4 fixed top-0 left-0 flex flex-col space-y-12 justify-center items-center"
 		>
 			<SidebarIcon pathname="/">
 				<PlanetOutline />
