@@ -1,4 +1,5 @@
 <script>
+	import ProjectCard from '$lib/components/ProjectCard.svelte';
 	import { ArrowForwardCircleOutline } from 'svelte-ionicons';
 </script>
 
@@ -120,10 +121,14 @@
 					</div>
 				</div>
 				<div class="w-full h-full flex-1 flex space-x-6">
-					<div class="bg-white hover:border hover:border-outline duration-200 transition cursor-pointer aspect-square p-6 rounded-2xl">
+					<div
+						class="bg-white hover:border hover:border-outline duration-200 transition cursor-pointer aspect-square p-6 rounded-2xl"
+					>
 						<p>pp</p>
 					</div>
-					<div class="bg-white hover:border hover:border-outline duration-200 transition cursor-pointer w-full p-6 py-5 rounded-2xl flex flex-col justify-between">
+					<div
+						class="bg-white hover:border hover:border-outline duration-200 transition cursor-pointer w-full p-6 py-5 rounded-2xl flex flex-col justify-between"
+					>
 						<div class="self-end">
 							<a href="/">
 								<ArrowForwardCircleOutline size="28" />
@@ -135,34 +140,22 @@
 					</div>
 				</div>
 				<div class="w-full h-full flex-1 flex space-x-6">
-					<div class="bg-white hover:border hover:border-outline duration-200 transition cursor-pointer w-full p-6 rounded-2xl flex justify-between">
-						<p class="font-serif font-normal text-[1.3rem] leading-[1.75rem] self-end">
+					<div
+						class="bg-white hover:border hover:border-outline duration-200 transition cursor-pointer w-full rounded-2xl flex justify-between"
+					>
+						<p class="font-serif font-normal w-[40%] text-[1.3rem] leading-[1.75rem] self-end p-6">
 							read<br />my blog
 						</p>
-						<div class="">
-							<a href="/">
-								<ArrowForwardCircleOutline size="28" />
-							</a>
+						<div class="w-full relative flex justify-end pt-6 pr-6">
+							<img src="/article.svg" alt="" />
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="w-[45%] h-full flex flex-col space-y-6">
-				<div
-					class="w-full h-full flex-1 hover:flex-[1.75] duration-200 transition-all bg-white p-4 rounded-2xl"
-				>
-					<p>1</p>
-				</div>
-				<div
-					class="w-full h-full flex-1 hover:flex-[1.75] duration-200 transition-all bg-white p-4 rounded-2xl"
-				>
-					<p>2</p>
-				</div>
-				<div
-					class="w-full h-full flex-1 hover:flex-[1.75] duration-200 transition-all bg-white p-4 rounded-2xl"
-				>
-					<p>3</p>
-				</div>
+				<ProjectCard title="Handles" />
+				<ProjectCard title="OmahTI Official Site"/>
+				<ProjectCard title="GetHeroes"/>
 			</div>
 		</div>
 	</div>
