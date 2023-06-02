@@ -37,16 +37,11 @@
 				</a>
 			</div>
 
-			<div class="w-full flex space-x-6 md:space-x-0 md:max-h-40">
-				<div
-					class="md:hidden w-full rounded-xl transition hover:border-[0.8px] border-outline duration-200 bg-white overflow-clip flex flex-col space-y-4"
-				>
-					<img src="/avatar.png" alt="Avatar" class="object-cover h-full w-full" />
+			<div class="w-full h-[10.5rem] flex space-x-4">
+				<div class="flex-1 sm:flex-none sm:w-[10.5rem] h-full bg-gray-200 rounded-xl">
+
 				</div>
-				<a
-					href="/project"
-					class="w-full aspect-square rounded-xl transition hover:border-[0.8px] border-outline duration-200 bg-white px-4 py-3.5 lg:p-5 flex flex-col justify-between"
-				>
+				<div class="flex-1 h-full bg-white p-4 rounded-xl flex flex-col justify-between hover:border-[0.8px] hover:border-outline transition duration-200">
 					<div class="w-full flex justify-end">
 						<button>
 							<ArrowForwardCircleOutline />
@@ -56,44 +51,71 @@
 						discover <br />
 						all projects
 					</h3>
+				</div>
+			</div>
+
+			<div class="flex flex-col space-y-4 md:space-y-0 md:grid md:grid-cols-2 md:gap-4">
+				<a
+					href="/project/sindustore"
+					class="overflow-clip  rounded-xl transition hover:border-[0.8px] border-outline duration-200 bg-white flex flex-col justify-between"
+				>
+					<div class="px-6 py-5 flex flex-col">
+						<div class="flex justify-between items-center">
+							<p class="text-xs tracking-wider font-medium">FLUTTER APPS</p>
+							<button>
+								<ArrowForwardCircleOutline />
+							</button>
+						</div>
+						<h2 class="font-source text-2xl mt-4 font-semibold">Sindustore</h2>
+						<p class="font-extralight text-sm mt-1">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum mauris nec
+							interdum auctor. Fusce gravida dictum
+						</p>
+					</div>
+					<div class="h-48 bg-gray-200 rounded-xl" />
+				</a>
+				<a
+					href="/project/sindustore"
+					class="overflow-clip  rounded-xl transition hover:border-[0.8px] border-outline duration-200 bg-white flex flex-col justify-between"
+				>
+					<div class="px-6 py-5 flex flex-col">
+						<div class="flex justify-between items-center">
+							<p class="text-xs tracking-wider font-medium">FLUTTER APPS</p>
+							<button>
+								<ArrowForwardCircleOutline />
+							</button>
+						</div>
+						<h2 class="font-source text-2xl mt-4 font-semibold">Sindustore</h2>
+						<p class="font-extralight text-sm mt-1">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum mauris nec
+							interdum auctor. Fusce gravida dictum
+						</p>
+					</div>
+					<div class="h-48 bg-gray-200 rounded-xl" />
+				</a>
+				<a
+					href="/project/sindustore"
+					class="overflow-clip  rounded-xl transition hover:border-[0.8px] border-outline duration-200 bg-white flex flex-col justify-between"
+				>
+					<div class="px-6 py-5 flex flex-col">
+						<div class="flex justify-between items-center">
+							<p class="text-xs tracking-wider font-medium">FLUTTER APPS</p>
+							<button>
+								<ArrowForwardCircleOutline />
+							</button>
+						</div>
+						<h2 class="font-source text-2xl mt-4 font-semibold">Sindustore</h2>
+						<p class="font-extralight text-sm mt-1">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum mauris nec
+							interdum auctor. Fusce gravida dictum
+						</p>
+					</div>
+					<div class="w-full aspect-video bg-gray-200 rounded-xl" />
 				</a>
 			</div>
-
-			<a
-				href="/project/sindustore"
-				class="overflow-clip aspect-square md:aspect-video rounded-xl transition hover:border-[0.8px] border-outline duration-200 bg-white flex flex-col justify-between"
-			>
-				<div class="px-6 py-5 flex flex-col">
-					<div class="flex justify-between items-center">
-						<p class="text-xs tracking-wider font-medium">FLUTTER APPS</p>
-						<button>
-							<ArrowForwardCircleOutline />
-						</button>
-					</div>
-					<h2 class="font-source text-2xl mt-4 font-semibold">Sindustore</h2>
-					<p class="font-extralight text-sm mt-1">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum mauris nec
-						interdum auctor. Fusce gravida dictum
-					</p>
-				</div>
-				<div class="h-1/2 bg-gray-200 rounded-xl" />
-			</a>
-
-			<div class="flex w-full space-x-6 justify-start">
-				<div class="flex flex-col space-y-6">
-					<div
-						class="rounded-xl h-full w-full bg-white flex justify-between transition hover:border-[0.8px] border-outline duration-200 cursor-pointer"
-					>
-						komtol
-					</div>
-					<div
-						class="rounded-xl h-full w-full bg-white flex justify-between transition hover:border-[0.8px] border-outline duration-200 cursor-pointer"
-					>
-						komtol
-					</div>
-				</div>
-			</div>
 		</div>
+
+	
 		<div class="hidden lg:flex w-full h-full space-x-6">
 			<div class="w-[55%] h-full flex flex-col space-y-6">
 				<div
@@ -154,8 +176,8 @@
 			</div>
 			<div class="w-[45%] h-full flex flex-col space-y-6">
 				<ProjectCard title="Handles" />
-				<ProjectCard title="OmahTI Official Site"/>
-				<ProjectCard title="GetHeroes"/>
+				<ProjectCard title="OmahTI Official Site" />
+				<ProjectCard title="GetHeroes" />
 			</div>
 		</div>
 	</div>

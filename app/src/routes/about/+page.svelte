@@ -3,16 +3,14 @@
 </script>
 
 <section>
-	<div class="p-6 flex flex-col items-center justify-start space-y-6 md:space-y-0">
-		<div class="w-full md:hidden overflow-clip aspect-square rounded-xl bg-white">
-			<!--Photo-->
-		</div>
-
-		<div class="md:flex md:flex-col md:items-center md:justify-start md:space-y-6">
+	<div class="p-6 flex flex-col items-center justify-start">
+		<div class="flex flex-col space-y-6 md:items-center md:justify-start md:space-y-6">
 			<div class="flex space-x-6 h-40">
-				<div class="w-full p-6 rounded-xl bg-white flex flex-col space-y-2">
+				<div class="w-full p-4 md:p-6 rounded-xl bg-white flex flex-col space-y-2">
 					<h2 class="font-source font-semibold text-2xl">hi there! 👋</h2>
-					<p class="font-inter font-light text-sm leading-relaxed overflow-y-scroll">
+					<p
+						class="hidden md:block font-inter font-light text-sm leading-relaxed overflow-y-scroll"
+					>
 						<!--Identity, Based, What do I do, small hobby-->
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum mauris nec interdum
 						auctor. Fusce gravida dictum rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -20,6 +18,14 @@
 					</p>
 				</div>
 				<img src="/avatar.png" alt="Avatar" class="h-full aspect-square rounded-xl" />
+			</div>
+			<div class="w-full p-6 rounded-xl bg-white flex flex-col items-start text-left space-y-2">
+				<h2 class="font-source font-semibold text-2xl">the road so far 🚀</h2>
+				<p class="font-inter font-light text-sm leading-relaxed">
+					<!--origin, freelancing, mobile dev, ui/ux and web dev, present (dsa & system design)-->
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum mauris nec interdum
+					auctor. Fusce gravida dictum rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit
+				</p>
 			</div>
 			<div class="w-full p-6 rounded-xl bg-white flex flex-col items-end text-right space-y-2">
 				<h2 class="font-source font-semibold text-2xl">the road so far 🚀</h2>
