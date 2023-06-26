@@ -12,6 +12,12 @@ export const project = defineType({
       validation: (Title) => Title.required(),
     }),
     defineField({
+      name: 'caption',
+      title: 'Caption',
+      type: 'string',
+      validation: (Caption) => Caption.required(),
+    }),
+    defineField({
       name: 'content',
       title: 'Content',
       type: 'array',
@@ -38,7 +44,7 @@ export const project = defineType({
           ],
         },
       ],
-      validation: Content => Content.required()
+      validation: (Content) => Content.required(),
     }),
     defineField({
       name: 'slug',
@@ -56,6 +62,18 @@ export const project = defineType({
       options: {
         hotspot: true,
       },
+    }),
+    defineField({
+      name: 'type',
+      title: 'Type',
+      type: 'string',
+      validation: (Type) => Type.required(),
+    }),
+    defineField({
+      name: 'category',
+      title: 'Category',
+      type: 'string',
+      validation: (Category) => Category.required(),
     }),
     defineField({
       name: 'techstack',

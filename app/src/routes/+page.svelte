@@ -1,12 +1,16 @@
 <script>
 	import ProjectCard from '$lib/components/ProjectCard.svelte';
+	import ProjectCardMobile from '$lib/components/ProjectCardMobile.svelte';
 	import { ArrowForwardCircleOutline } from 'svelte-ionicons';
+
+	export let data;
 </script>
 
 <section>
 	<div
-		class="px-4 py-3.5 sm:py-8 sm:px-8 lg:px-24 lg:pt-8 lg:pb-12 lg:justify-center lg:h-screen flex flex-col space-y-6"
+		class="px-4 pr-7 py-4 sm:py-8 sm:px-8 lg:px-24 lg:pt-8 lg:pb-12 lg:justify-center lg:h-screen flex flex-col space-y-6"
 	>
+		<!-- MOBILE -->
 		<div class="flex flex-col space-y-4 lg:hidden">
 			<div class="w-full md:max-h-40 flex space-x-6">
 				<div
@@ -38,10 +42,10 @@
 			</div>
 
 			<div class="w-full h-[10.5rem] flex space-x-4">
-				<div class="flex-1 sm:flex-none sm:w-[10.5rem] h-full bg-gray-200 rounded-xl">
-
-				</div>
-				<div class="flex-1 h-full bg-white p-4 rounded-xl flex flex-col justify-between hover:border-[0.8px] hover:border-outline transition duration-200">
+				<div class="w-[10.5rem] bg-gray-200 rounded-xl" />
+				<div
+					class="flex-1 h-full bg-white p-4 rounded-xl flex flex-col justify-between hover:border-[0.8px] hover:border-outline transition duration-200"
+				>
 					<div class="w-full flex justify-end">
 						<button>
 							<ArrowForwardCircleOutline />
@@ -55,67 +59,24 @@
 			</div>
 
 			<div class="flex flex-col space-y-4 md:space-y-0 md:grid md:grid-cols-2 md:gap-4">
-				<a
-					href="/project/sindustore"
-					class="overflow-clip  rounded-xl transition hover:border-[0.8px] border-outline duration-200 bg-white flex flex-col justify-between"
-				>
-					<div class="px-6 py-5 flex flex-col">
-						<div class="flex justify-between items-center">
-							<p class="text-xs tracking-wider font-medium">FLUTTER APPS</p>
-							<button>
-								<ArrowForwardCircleOutline />
-							</button>
-						</div>
-						<h2 class="font-source text-2xl mt-4 font-semibold">Sindustore</h2>
-						<p class="font-extralight text-sm mt-1">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum mauris nec
-							interdum auctor. Fusce gravida dictum
-						</p>
-					</div>
-					<div class="h-48 bg-gray-200 rounded-xl" />
-				</a>
-				<a
-					href="/project/sindustore"
-					class="overflow-clip  rounded-xl transition hover:border-[0.8px] border-outline duration-200 bg-white flex flex-col justify-between"
-				>
-					<div class="px-6 py-5 flex flex-col">
-						<div class="flex justify-between items-center">
-							<p class="text-xs tracking-wider font-medium">FLUTTER APPS</p>
-							<button>
-								<ArrowForwardCircleOutline />
-							</button>
-						</div>
-						<h2 class="font-source text-2xl mt-4 font-semibold">Sindustore</h2>
-						<p class="font-extralight text-sm mt-1">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum mauris nec
-							interdum auctor. Fusce gravida dictum
-						</p>
-					</div>
-					<div class="h-48 bg-gray-200 rounded-xl" />
-				</a>
-				<a
-					href="/project/sindustore"
-					class="overflow-clip  rounded-xl transition hover:border-[0.8px] border-outline duration-200 bg-white flex flex-col justify-between"
-				>
-					<div class="px-6 py-5 flex flex-col">
-						<div class="flex justify-between items-center">
-							<p class="text-xs tracking-wider font-medium">FLUTTER APPS</p>
-							<button>
-								<ArrowForwardCircleOutline />
-							</button>
-						</div>
-						<h2 class="font-source text-2xl mt-4 font-semibold">Sindustore</h2>
-						<p class="font-extralight text-sm mt-1">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum mauris nec
-							interdum auctor. Fusce gravida dictum
-						</p>
-					</div>
-					<div class="w-full aspect-video bg-gray-200 rounded-xl" />
-				</a>
+				{#if data.project && data.project.length}
+					{#each data.project as item}
+						<ProjectCardMobile
+							title={item.title}
+							caption={item.caption}
+							slug={item.slug}
+							coverImage={item.coverImage}
+							type={item.type}
+							category={item.category}
+						/>
+					{/each}
+				{:else}
+					<p>No projects found.</p>
+				{/if}
 			</div>
 		</div>
 
-	
+		<!-- MEDIUM & DESKTOP -->
 		<div class="hidden lg:flex w-full h-full space-x-6">
 			<div class="w-[55%] h-full flex flex-col space-y-6">
 				<div
@@ -128,7 +89,7 @@
 								<ArrowForwardCircleOutline size="28" />
 							</a>
 						</div>
-						<span class="text-base font-light tracking-wide">
+						<span class="text-base font-light">
 							<b class="font-medium">Mobile Developer</b> and <b class="font-medium">CS Student</b>
 							based in Yogyakarta, Indonesia
 						</span>
@@ -174,10 +135,21 @@
 					</div>
 				</div>
 			</div>
-			<div class="w-[45%] h-full flex flex-col space-y-6">
-				<ProjectCard title="Handles" />
-				<ProjectCard title="OmahTI Official Site" />
-				<ProjectCard title="GetHeroes" />
+			<div class="w-[45%] h-full flex flex-colspace-y-6">
+				{#if data.project && data.project.length}
+					{#each data.project as item}
+						<ProjectCard
+							title={item.title}
+							caption={item.caption}
+							slug={item.slug}
+							coverImage={item.coverImage}
+							type={item.type}
+							category={item.category}
+						/>
+					{/each}
+				{:else}
+					<p>No projects found.</p>
+				{/if}
 			</div>
 		</div>
 	</div>

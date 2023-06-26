@@ -1,15 +1,24 @@
-import { getPosts } from '$lib/utils/sanity';
-import { error } from '@sveltejs/kit';
-import type { PageLoad } from './$types';
+// src/routes/+page.js
 
-export const load = (async () => {
-	const posts = await getPosts();
+import {createClient} from "@sanity/client";
 
-	if (posts) {
-		return {
-			posts
-		};
-	}
+const client = createClient({
+  projectId: "5a3auag5",
+  dataset: "production",
+  apiVersion: "2023-06-04",
+  useCdn: false
+});
 
-	throw error(404, 'Not found');
-}) satisfies PageLoad;
+export async function load() {
+  const data = await client.fetch(`*[_type == "project"]`);
+
+  if (data) {
+    return {
+      project: data
+    };
+  }
+  return {
+    status: 500,
+    body: new Error("Internal Server Error")
+  };
+}
