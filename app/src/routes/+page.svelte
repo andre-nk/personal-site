@@ -95,10 +95,10 @@
 						</span>
 					</div>
 					<div class="flex space-x-6">
-						<a href="/" class="cursor-pointer">
+						<a href="https://github.com/andre-nk" class="cursor-pointer">
 							<img alt="The project logo" src={'/github.svg'} height="26" width="26" />
 						</a>
-						<a href="/" class="cursor-pointer">
+						<a href="https://www.linkedin.com/in/andreasnk/" class="cursor-pointer">
 							<img alt="The project logo" src={'/linkedin.svg'} height="28" width="28" />
 						</a>
 					</div>
@@ -130,12 +130,12 @@
 							read<br />my blog
 						</p>
 						<div class="w-full relative flex justify-end pt-6 pr-6">
-							<img src="/article.svg" alt="" />
+							<img src="/article.svg" alt="article" />
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="w-[45%] h-full flex flex-colspace-y-6">
+			<div class="w-[45%] h-full flex flex-col space-y-6">
 				{#if data.project && data.project.length}
 					{#each data.project as item}
 						<ProjectCard

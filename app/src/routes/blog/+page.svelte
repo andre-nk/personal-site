@@ -5,7 +5,7 @@
 </script>
 
 <section>
-	<div class="p-6 flex flex-col items-center justify-start space-y-6">
+	<div class="px-4 pr-7 py-4 sm:py-8 sm:px-8 lg:px-24 lg:pt-8 lg:pb-12 flex flex-col items-center justify-start space-y-6">
 		<div class="w-full px-5 py-4 rounded-xl bg-white flex justify-start items-center space-x-4">
 			<SearchOutline size="20" />
 			<input
@@ -14,7 +14,7 @@
 				class="outline-none font-inter font-light"
 			/>
 		</div>
-		<div class="flex flex-col items-center justify-start space-y-6 md:space-y-0 md:grid md:grid-cols-2 gap-6">
+		<div class="flex flex-col items-center justify-start space-y-6 md:space-y-0 md:grid md:grid-cols-2 gap-6 lg:grid-cols-3">
 			<a
 				href="/project/sindustore"
 				class="w-full overflow-clip aspect-square rounded-xl transition hover:border-[0.8px] border-outline duration-200 bg-white flex flex-col justify-between"

@@ -18,12 +18,20 @@
 		<div
 			class="w-full h-8 bg-gray-200 absolute top-0 group-hover:h-[9rem] transition-all duration-300"
 		>
-			<img src={urlFor(coverImage).url()} alt="${coverImage} Cover" class="h-full object-cover w-full" />
+			<img
+				src={urlFor(coverImage).url()}
+				alt="${coverImage} Cover"
+				class="h-full object-cover w-full"
+			/>
 		</div>
 		<div
 			class="w-full flex justify-between items-center px-5 pt-4 pb-0 absolute top-8 group-hover:top-0 transition-all duration-300"
 		>
-			<p class="text-[12px] font-medium tracking-wider uppercase">{type} • {category}</p>
+			<p
+				class="text-[12px] font-medium tracking-wider uppercase bg-transparent group-hover:bg-white group-hover:rounded-lg group-hover:px-2.5 group-hover:py-1 transition-all duration-300"
+			>
+				{type} • {category}
+			</p>
 			<a href="/project/{slug}">
 				<ArrowForwardCircleOutline size="28" />
 			</a>

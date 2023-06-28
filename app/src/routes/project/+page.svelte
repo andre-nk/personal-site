@@ -1,11 +1,16 @@
 <script>
-	import { SearchOutline, ArrowForwardCircleOutline } from 'svelte-ionicons';
+	import ProjectTile from '$lib/components/ProjectTile.svelte';
+	import { SearchOutline } from 'svelte-ionicons';
 
 	let searchQuery = '';
+
+  export let data;
 </script>
 
 <section>
-	<div class="p-6 flex flex-col items-center justify-start space-y-6">
+	<div
+		class="px-4 pr-7 py-4 sm:py-8 sm:px-8 lg:px-24 lg:pt-8 lg:pb-12 flex flex-col items-center justify-start space-y-6"
+	>
 		<div class="w-full px-5 py-4 rounded-xl bg-white flex justify-start items-center space-x-4">
 			<SearchOutline size="20" />
 			<input
@@ -18,63 +23,20 @@
 		<div
 			class="flex flex-col space-y-6 md:space-y-0 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-6"
 		>
-			<a
-				href="/project/sindustore"
-				class="w-full overflow-clip aspect-square rounded-xl transition hover:border-[0.8px] border-outline duration-200 bg-white flex flex-col justify-between"
-			>
-				<div class="px-6 py-5 flex flex-col">
-					<div class="flex justify-between items-center">
-						<p class="text-xs tracking-wider font-medium">FLUTTER APPS</p>
-						<button>
-							<ArrowForwardCircleOutline />
-						</button>
-					</div>
-					<h2 class="font-source text-2xl mt-4 font-semibold">Sindustore</h2>
-					<p class="font-extralight text-sm mt-1">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum mauris nec
-						interdum auctor. Fusce gravida dictum
-					</p>
-				</div>
-				<div class="w-full aspect-video bg-gray-200 rounded-xl" />
-			</a>
-			<a
-				href="/project/sindustore"
-				class="w-full overflow-clip aspect-square rounded-xl transition hover:border-[0.8px] border-outline duration-200 bg-white flex flex-col justify-between"
-			>
-				<div class="px-6 py-5 flex flex-col">
-					<div class="flex justify-between items-center">
-						<p class="text-xs tracking-wider font-medium">FLUTTER APPS</p>
-						<button>
-							<ArrowForwardCircleOutline />
-						</button>
-					</div>
-					<h2 class="font-source text-2xl mt-4 font-semibold">Sindustore</h2>
-					<p class="font-extralight text-sm mt-1">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum mauris nec
-						interdum auctor. Fusce gravida dictum
-					</p>
-				</div>
-				<div class="w-full aspect-video bg-gray-200 rounded-xl" />
-			</a>
-			<a
-				href="/project/sindustore"
-				class="w-full overflow-clip aspect-square rounded-xl transition hover:border-[0.8px] border-outline duration-200 bg-white flex flex-col justify-between"
-			>
-				<div class="px-6 py-5 flex flex-col">
-					<div class="flex justify-between items-center">
-						<p class="text-xs tracking-wider font-medium">FLUTTER APPS</p>
-						<button>
-							<ArrowForwardCircleOutline />
-						</button>
-					</div>
-					<h2 class="font-source text-2xl mt-4 font-semibold">Sindustore</h2>
-					<p class="font-extralight text-sm mt-1">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum mauris nec
-						interdum auctor. Fusce gravida dictum
-					</p>
-				</div>
-				<div class="w-full aspect-video bg-gray-200 rounded-xl" />
-			</a>
+			{#if data.project && data.project.length}
+				{#each data.project as item}
+					<ProjectTile
+						title={item.title}
+						caption={item.caption}
+						slug={item.slug}
+						coverImage={item.coverImage}
+						type={item.type}
+						category={item.category}
+					/>
+				{/each}
+			{:else}
+				<p>No projects found.</p>
+			{/if}
 		</div>
 	</div>
 </section>
