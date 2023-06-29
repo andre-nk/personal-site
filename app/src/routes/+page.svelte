@@ -6,6 +6,11 @@
 	export let data;
 </script>
 
+<svelte:head>
+	<title>Andreas Nk.</title>
+	<html lang="en" />
+</svelte:head>
+
 <section>
 	<div
 		class="px-4 pr-7 py-4 sm:py-8 sm:px-8 lg:px-24 lg:pt-8 lg:pb-12 lg:justify-center lg:h-screen flex flex-col space-y-6"
@@ -95,10 +100,10 @@
 						</span>
 					</div>
 					<div class="flex space-x-6">
-						<a href="https://github.com/andre-nk" class="cursor-pointer">
+						<a href="https://github.com/andre-nk" target="_blank" class="cursor-pointer">
 							<img alt="The project logo" src={'/github.svg'} height="26" width="26" />
 						</a>
-						<a href="https://www.linkedin.com/in/andreasnk/" class="cursor-pointer">
+						<a href="https://www.linkedin.com/in/andreasnk/" target="_blank" class="cursor-pointer">
 							<img alt="The project logo" src={'/linkedin.svg'} height="28" width="28" />
 						</a>
 					</div>
@@ -109,20 +114,23 @@
 					>
 						<p>pp</p>
 					</div>
-					<div
+					<a
+						href="/project"
 						class="bg-white hover:border hover:border-outline duration-200 transition cursor-pointer w-full p-6 py-5 rounded-2xl flex flex-col justify-between"
 					>
 						<div class="self-end">
-							<a href="/">
-								<ArrowForwardCircleOutline size="28" />
-							</a>
+							<ArrowForwardCircleOutline size="28" />
 						</div>
 						<p class="font-serif font-normal text-[1.3rem] leading-[1.75rem]">
 							discover<br />all projects
 						</p>
-					</div>
+					</a>
 				</div>
-				<div class="w-full h-full flex-1 flex space-x-6">
+				<a
+					href="https://andrenk.hashnode.dev"
+					target="_blank"
+					class="w-full h-full flex-1 flex space-x-6"
+				>
 					<div
 						class="bg-white hover:border hover:border-outline duration-200 transition cursor-pointer w-full rounded-2xl flex justify-between"
 					>
@@ -133,7 +141,7 @@
 							<img src="/article.svg" alt="article" />
 						</div>
 					</div>
-				</div>
+				</a>
 			</div>
 			<div class="w-[45%] h-full flex flex-col space-y-6">
 				{#if data.project && data.project.length}

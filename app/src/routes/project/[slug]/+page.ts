@@ -1,5 +1,3 @@
-// src/routes/+page.js
-
 import { client } from '$lib/utils/sanity';
 
 export async function load({params}) {
