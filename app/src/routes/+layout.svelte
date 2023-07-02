@@ -14,6 +14,11 @@
 		CodeSlashOutline
 	} from 'svelte-ionicons';
 
+	import { dev } from '$app/environment';
+	import { inject } from '@vercel/analytics';
+
+	inject({ mode: dev ? 'development' : 'production' });
+
 	//states
 	let isSideBarActive = false;
 
@@ -22,6 +27,10 @@
 		isSideBarActive = !isSideBarActive;
 	}
 </script>
+
+<svelte:head>
+	<link rel="icon" href={'/favicon.ico'} />
+</svelte:head>
 
 <div>
 	<div class="overflow-clip lg:hidden">

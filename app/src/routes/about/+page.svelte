@@ -23,7 +23,7 @@
 						satisfaction of creatively tackling challenges.
 					</p>
 				</div>
-				<img src="/avatar.png" alt="Avatar" class="h-full aspect-square rounded-xl" />
+				<img src="/pp.jpeg" alt="Avatar" class="h-full aspect-square rounded-xl" />
 			</div>
 			<div class="w-full p-6 rounded-xl bg-white flex flex-col items-start text-left space-y-2">
 				<h2 class="font-source font-semibold text-2xl">the road so far 🚀</h2>
