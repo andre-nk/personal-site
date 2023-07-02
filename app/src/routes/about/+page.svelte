@@ -8,7 +8,7 @@
 
 <section>
 	<div
-		class="px-4 pr-7 py-4 sm:py-8 sm:px-8 lg:px-52 lg:py-12 flex flex-col items-center justify-start"
+		class="px-4  py-4 sm:py-8 sm:px-8 lg:px-52 lg:py-12 flex flex-col items-center justify-start"
 	>
 		<div class="flex flex-col space-y-6 md:items-center md:justify-start md:space-y-6">
 			<div class="flex space-x-6 h-40">

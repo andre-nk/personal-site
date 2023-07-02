@@ -12,7 +12,7 @@
 
 <section>
 	<div
-		class="px-4 pr-7 py-4 sm:py-8 sm:px-8 lg:px-24 lg:pt-8 lg:pb-12 lg:justify-center lg:h-screen flex flex-col space-y-6"
+		class="px-4  py-4 sm:py-8 sm:px-8 lg:px-24 lg:pt-8 lg:pb-12 lg:justify-center lg:h-screen flex flex-col space-y-6"
 	>
 		<!-- MOBILE -->
 		<div class="flex flex-col space-y-4 lg:hidden">
