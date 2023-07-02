@@ -11,7 +11,6 @@
 	export let category: string;
 </script>
 
-
 <a
 	href="/project/{slug.current}"
 	class="w-full overflow-clip aspect-square rounded-xl transition border-0 hover:border-[0.8px] border-outline duration-200 bg-white flex flex-col justify-between"
@@ -25,10 +24,12 @@
 		</div>
 		<h2 class="font-source text-2xl mt-4 font-semibold">{title}</h2>
 		<p class="font-extralight text-sm mt-1">
-      {caption}
+			{caption}
 		</p>
 	</div>
-	<div class="w-full aspect-video bg-gray-200 rounded-xl overflow-clip border border-t border-gray-200">
-    <img src={urlFor(coverImage).url()} alt={title} class="w-full h-full">
-  </div>
+	<div
+		class="w-full aspect-video bg-gray-200 rounded-xl overflow-clip border border-t border-gray-200"
+	>
+		<img src={urlFor(coverImage).url()} alt={title} class="w-full h-full" />
+	</div>
 </a>

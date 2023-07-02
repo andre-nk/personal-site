@@ -51,7 +51,6 @@
 				<SidebarIcon pathname="/project">
 					<CodeSlashOutline />
 				</SidebarIcon>
-
 				<SidebarIcon pathname="/blog">
 					<BookOutline />
 				</SidebarIcon>

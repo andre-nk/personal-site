@@ -4,12 +4,11 @@
 	import { ArrowForwardCircleOutline } from 'svelte-ionicons';
 
 	export let data;
-</script>
 
-<svelte:head>
-	<title>Andreas Nk.</title>
-	<html lang="en" />
-</svelte:head>
+	$: {
+		document.title = 'Andreas N. - Portfolio';
+	}
+</script>
 
 <section>
 	<div
@@ -47,7 +46,9 @@
 			</div>
 
 			<div class="w-full h-[10.5rem] flex space-x-4">
-				<div class="w-[10.5rem] bg-gray-200 rounded-xl" />
+				<div class="w-[10.5rem] bg-gray-200 rounded-xl overflow-clip">
+					<img src="/avatar.png" alt="avatar" class="w-full aspect-square" />
+				</div>
 				<div
 					class="flex-1 h-full bg-white p-4 rounded-xl flex flex-col justify-between hover:border-[0.8px] hover:border-outline transition duration-200"
 				>
@@ -110,9 +111,9 @@
 				</div>
 				<div class="w-full h-full flex-1 flex space-x-6">
 					<div
-						class="bg-white hover:border hover:border-outline duration-200 transition cursor-pointer aspect-square p-6 rounded-2xl"
+						class="bg-white hover:border hover:border-outline duration-200 w-[35%] overflow-clip transition cursor-pointer rounded-2xl"
 					>
-						<p>pp</p>
+						<img src="/avatar.png" alt="avatar" class="w-full aspect-square" />
 					</div>
 					<a
 						href="/project"

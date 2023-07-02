@@ -1,17 +1,18 @@
 <script lang="ts">
 	import { urlFor } from '$lib/utils/image';
-	import type { Image } from '@sanity/types';
+	import type { Image, Slug } from '@sanity/types';
 	import { ArrowForwardCircleOutline } from 'svelte-ionicons';
 
 	export let title: string;
 	export let caption: string;
-	export let slug: string;
+	export let slug: Slug;
 	export let coverImage: Image;
 	export let type: string;
 	export let category: string;
 </script>
 
-<div
+<a
+	href="/project/{slug.current}"
 	class="w-full h-full flex-1 group hover:flex-[1.5] flex flex-col justify-between duration-200 transition-all bg-white rounded-2xl overflow-clip"
 >
 	<div class="w-full relative">
@@ -32,7 +33,7 @@
 			>
 				{type} • {category}
 			</p>
-			<a href="/project/{slug}">
+			<a href="/project/{slug.current}">
 				<ArrowForwardCircleOutline size="28" />
 			</a>
 		</div>
@@ -41,4 +42,4 @@
 		<h2 class="font-serif font-medium text-[1.35rem]">{title}</h2>
 		<p class="text-sm font-light pt-0.5">{caption}</p>
 	</div>
-</div>
+</a>

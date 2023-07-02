@@ -19,12 +19,11 @@
 
 	// Run the filterArticles function on initial load
 	onMount(filterArticles);
-</script>
 
-<svelte:head>
-	<title>Andreas Nk. • Blog</title>
-	<html lang="en" />
-</svelte:head>
+	$: {
+    document.title = "Andreas N. - Articles"
+  }
+</script>
 
 <section>
 	<div
