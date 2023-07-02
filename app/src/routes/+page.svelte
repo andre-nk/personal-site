@@ -4,15 +4,19 @@
 	import { ArrowForwardCircleOutline } from 'svelte-ionicons';
 
 	export let data;
-
-	$: {
-		document.title = 'Andreas N. - Portfolio';
-	}
 </script>
+
+<svelte:head>
+	<title>Andreas N. - Portfolio</title>
+	<meta
+		name="description"
+		content="Mobile Developer, CS Student and Software Engineering Enthusiast based on Yogyakarta, Indonesia"
+	/>
+</svelte:head>
 
 <section>
 	<div
-		class="px-4  py-4 sm:py-8 sm:px-8 lg:px-24 lg:pt-8 lg:pb-12 lg:justify-center lg:h-screen flex flex-col space-y-6"
+		class="px-4 py-4 sm:py-8 sm:px-8 lg:px-24 lg:pt-8 lg:pb-12 lg:justify-center lg:h-screen flex flex-col space-y-6"
 	>
 		<!-- MOBILE -->
 		<div class="flex flex-col space-y-4 lg:hidden">

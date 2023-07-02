@@ -1,10 +1,14 @@
 <script>
 	import { ArrowForward } from 'svelte-ionicons';
-
-	$: {
-    document.title = "Andreas N. - About Me"
-  }
 </script>
+
+<svelte:head>
+	<title>Andreas N. - About Me</title>
+	<meta
+		name="description"
+		content="Mobile Developer, CS Student and Software Engineering Enthusiast based on Yogyakarta, Indonesia"
+	/>
+</svelte:head>
 
 <section>
 	<div

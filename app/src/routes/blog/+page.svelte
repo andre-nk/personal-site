@@ -19,15 +19,19 @@
 
 	// Run the filterArticles function on initial load
 	onMount(filterArticles);
-
-	$: {
-    document.title = "Andreas N. - Articles"
-  }
 </script>
+
+<svelte:head>
+	<title>Andreas N. - Articles</title>
+	<meta
+		name="description"
+		content="This is a collection of tech-related articles I've written, officially hosted on Hashnode"
+	/>
+</svelte:head>
 
 <section>
 	<div
-		class="px-4  py-4 sm:py-8 sm:px-8 lg:px-24 lg:pt-8 lg:pb-12 flex flex-col items-center justify-start space-y-6"
+		class="px-4 py-4 sm:py-8 sm:px-8 lg:px-24 lg:pt-8 lg:pb-12 flex flex-col items-center justify-start space-y-6"
 	>
 		<div class="w-full px-5 py-4 rounded-xl bg-white flex justify-start items-center space-x-4">
 			<SearchOutline size="20" />

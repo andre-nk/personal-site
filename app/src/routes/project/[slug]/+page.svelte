@@ -1,18 +1,15 @@
 <script lang="ts">
 	import moment from 'moment';
-	import { onMount } from 'svelte';
 	import { urlFor } from '$lib/utils/image';
-	import { browser } from '$app/environment';
 	import { PortableText } from '@portabletext/svelte';
 
 	export let data;
-
-	onMount(() => {
-		if (browser) {
-			document.title = `Andreas N. - ${data.project.title}`;
-		}
-	});
 </script>
+
+<svelte:head>
+  <title>Andreas N. - {data.project.title}</title>
+  <meta name="description" content={data.project.caption} />
+</svelte:head>
 
 <section class="px-7 py-12 sm:px-8 lg:px-64 lg:py-20 flex flex-col space-y-8">
 	<div class="flex flex-col space-y-5 lg:space-y-6 px-4">

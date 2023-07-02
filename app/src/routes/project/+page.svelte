@@ -20,11 +20,15 @@
 
 	// Run the filterProjects function on initial load
 	onMount(filterProjects);
-
-	$: {
-    document.title = "Andreas N. - Projects"
-  }
 </script>
+
+<svelte:head>
+	<title>Andreas N. - Projects</title>
+	<meta
+		name="description"
+		content="This is a collection of project case studies I've worked on, both personal and professional"
+	/>
+</svelte:head>
 
 <section>
 	<div
